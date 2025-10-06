@@ -1,4 +1,4 @@
-from utils import process_data
+from app.utils import process_data
 
 def test_process_data():
     sample = [{"userId": 1, "id": 101, "title": "abc"}]
