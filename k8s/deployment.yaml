@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-capstone
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-capstone
+  template:
+    metadata:
+      labels:
+        app: devops-capstone
+    spec:
+      containers:
+        - name: devops-capstone
+          image: <your_dockerhub_username>/devops-capstone:latest
+          args: ["--limit", "50"]
+          volumeMounts:
+            - name: reports
+              mountPath: /app
+      volumes:
+        - name: reports
+          hostPath:
+            path: /tmp/reports
+            type: DirectoryOrCreate
