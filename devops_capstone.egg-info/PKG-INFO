@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: devops_capstone
+Version: 0.1
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: schedule
+Requires-Dist: openpyxl
+Dynamic: requires-dist
