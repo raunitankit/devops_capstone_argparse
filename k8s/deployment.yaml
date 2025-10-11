@@ -14,11 +14,12 @@ spec:
     spec:
       containers:
         - name: devops-capstone
-          image: <your_dockerhub_username>/devops-capstone:latest
+          image: raunitankit/devops-capstone:latest
+          imagePullPolicy: Always 
           args: ["--limit", "50"]
           volumeMounts:
             - name: reports
-              mountPath: /app
+              mountPath: /app/reports
       volumes:
         - name: reports
           hostPath:
