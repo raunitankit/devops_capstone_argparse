@@ -47,7 +47,7 @@ def main(run_once=False):
     # -------------------------------------------------
     # Scheduler (demo: every 1 minute)
     # -------------------------------------------------
-    schedule.every(1).minutes.do(main, run_once=True)
+    schedule.every(2).minutes.do(main, run_once=True)
     while True:
         schedule.run_pending()
-        time.sleep(1)
+        time.sleep(2)
